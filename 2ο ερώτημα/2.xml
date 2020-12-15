@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<rdf:RDF 
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:a="http://description.org/schema/">
+	
+  <rdf:Description rdf:about="http://mydomain/Statement1">
+	<rdf:subject rdf:resource="http://description.org/schema/#Ceid"/>
+	<rdf:predicate rdf:resource="http://description.org/schema/located"/>
+	<rdf:object>in Rio</rdf:object>
+  </rdf:Description>
+  
+   <rdf:Description rdf:about="H google">
+	<a:mentions rdf:resource="http://mydomain/Statement1"/> 
+  </rdf:Description>
+  
+</rdf:RDF>
+  

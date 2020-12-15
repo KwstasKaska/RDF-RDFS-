@@ -1,0 +1,493 @@
+<?xml version="1.0"?>
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:sent="http://www.mydomain.org/sent/">
+
+	<rdfs:Class rdf:about="http://www.mydomain.org/sent/Person"/>
+	
+	<rdfs:Class rdf:about="http://www.mydomain.org/sent/Student">
+		<rdfs:subClassOf rdf:resource="http://www.mydomain.org/sent/Person"/>
+	</rdfs:Class>
+	
+	<rdfs:Class rdf:about="http://www.mydomain.org/sent/Professor">
+		<rdfs:subClassOf rdf:resource="http://www.mydomain.org/sent/Person"/>
+	</rdfs:Class>
+	
+	<rdfs:Class rdf:about="http://www.mydomain.org/sent/Department"/>
+	
+	<rdfs:Class rdf:about="http://www.mydomain.org/sent/Lesson"/>
+	
+	<rdfs:Class rdf:about="http://www.mydomain.org/sent/Classroom"/>
+	
+	<rdf:Property rdf:about="http://www.mydomain.org/sent/has_name">
+		<rdfs:domain rdf:resource="http://www.mydomain.org/sent/Person"/>
+		<rdfs:range  rdf:resource="http://www.w3.org/2000/01/rdf-schema/Literal"/>
+	</rdf:Property>
+	
+	<rdf:Property rdf:about="http://www.mydomain.org/sent/has_phone">
+		<rdfs:domain rdf:resource="http://www.mydomain.org/sent/Person"/>
+		<rdfs:range  rdf:resource="http://www.w3.org/2000/01/rdf-schema/Literal"/>
+	</rdf:Property>
+	
+	<rdf:Property rdf:about="http://www.mydomain.org/sent/has_email">
+		<rdfs:domain rdf:resource="http://www.mydomain.org/sent/Person"/>
+		<rdfs:range  rdf:resource="http://www.w3.org/2000/01/rdf-schema/Literal"/>
+	</rdf:Property>
+	
+	<rdf:Property rdf:about="http://www.mydomain.org/sent/has_age">
+		<rdfs:domain rdf:resource="http://www.mydomain.org/sent/Person"/>
+		<rdfs:range  rdf:resource="http://www.w3.org/2000/01/rdf-schema/Integer"/>
+	</rdf:Property>
+	
+	<rdf:Property rdf:about="http://www.mydomain.org/sent/member_of">
+		<rdfs:domain rdf:resource="http://www.mydomain.org/sent/Person"/>
+		<rdfs:range  rdf:resource="http://www.mydomain.org/sent/Department"/>
+	</rdf:Property>
+	
+	<rdf:Property rdf:about="http://www.mydomain.org/sent/teaches">
+		<rdfs:domain rdf:resource="http://www.mydomain.org/sent/Professor"/>
+		<rdfs:range  rdf:resource="http://www.mydomain.org/sent/Lesson"/>
+	</rdf:Property>
+	
+	<rdf:Property rdf:about="http://www.mydomain.org/sent/les_name">
+		<rdfs:domain rdf:resource="http://www.mydomain.org/sent/Lesson"/>
+		<rdfs:range  rdf:resource="http://www.w3.org/2000/01/rdf-schema/Literal"/>
+	</rdf:Property>
+	
+	<rdf:Property rdf:about="http://www.mydomain.org/sent/taught_by">
+		<rdfs:domain rdf:resource="http://www.mydomain.org/sent/Lesson"/>
+		<rdfs:range  rdf:resource="http://www.mydomain.org/sent/Professor"/>
+	</rdf:Property>
+	
+	<rdf:Property rdf:about="http://www.mydomain.org/sent/dep_name">
+		<rdfs:domain rdf:resource="http://www.mydomain.org/sent/Department"/>
+		<rdfs:range  rdf:resource="http://www.w3.org/2000/01/rdf-schema/Literal"/>
+	</rdf:Property>
+	
+	<rdf:Property rdf:about="http://www.mydomain.org/sent/dep_city">
+		<rdfs:domain rdf:resource="http://www.mydomain.org/sent/Department"/>
+		<rdfs:range  rdf:resource="http://www.w3.org/2000/01/rdf-schema/Literal"/>
+	</rdf:Property>
+	
+	<rdf:Property rdf:about="http://www.mydomain.org/sent/room_name">
+		<rdfs:domain rdf:resource="http://www.mydomain.org/sent/Classroom"/>
+		<rdfs:range  rdf:resource="http://www.w3.org/2000/01/rdf-schema/Literal"/>
+	</rdf:Property>
+	
+	<rdf:Property rdf:about="http://www.mydomain.org/sent/room_capacity">
+		<rdfs:domain rdf:resource="http://www.mydomain.org/sent/Classroom"/>
+		<rdfs:range  rdf:resource="http://www.w3.org/2000/01/rdf-schema/Integer"/>
+	</rdf:Property>
+	
+	<rdf:Property rdf:about="http://www.mydomain.org/sent/room_department">
+		<rdfs:domain rdf:resource="http://www.mydomain.org/sent/Classroom"/>
+		<rdfs:range  rdf:resource="http://www.mydomain.org/sent/Department"/>
+	</rdf:Property>
+	
+	<rdf:Description rdf:about="http://www.mydomain.org/sent/Department1">
+		<rdf:type rdf:resource="http://www.mydomain.org/sent/Department"/>
+		<sent:dep_name>Ceid</sent:dep_name>
+		<sent:dep_city>Patra</sent:dep_city>
+	</rdf:Description>
+	
+	<rdf:Description rdf:about="http://www.mydomain.org/sent/Department2">
+		<rdf:type rdf:resource="http://www.mydomain.org/sent/Department"/>
+		<sent:dep_name>Arxitektonwn</sent:dep_name>
+		<sent:dep_city>Patra</sent:dep_city>
+	</rdf:Description>
+	
+	<rdf:Description rdf:about="http://www.mydomain.org/sent/Department3">
+		<rdf:type rdf:resource="http://www.mydomain.org/sent/Department"/>
+		<sent:dep_name>Hlektrologwn</sent:dep_name>
+		<sent:dep_city>Patra</sent:dep_city>
+	</rdf:Description>
+	
+	<rdf:Description rdf:about="http://www.mydomain.org/sent/Department4">
+		<rdf:type rdf:resource="http://www.mydomain.org/sent/Department"/>
+		<sent:dep_name>Istoriko</sent:dep_name>
+		<sent:dep_city>Athina</sent:dep_city>
+	</rdf:Description>
+	
+	<rdf:Description rdf:about="http://www.mydomain.org/sent/Department5">
+		<rdf:type rdf:resource="http://www.mydomain.org/sent/Department"/>
+		<sent:dep_name>Gewponiko</sent:dep_name>
+		<sent:dep_city>Giannena</sent:dep_city>
+	</rdf:Description>
+	
+	<rdf:Description rdf:about="http://www.mydomain.org/sent/Department6">
+		<rdf:type rdf:resource="http://www.mydomain.org/sent/Department"/>
+		<sent:dep_name>Mathimatiko</sent:dep_name>
+		<sent:dep_city>Krhths</sent:dep_city>
+	</rdf:Description>
+	
+	<rdf:Description rdf:about="http://www.mydomain.org/sent/Professor1">
+		<rdf:type rdf:resource="http://www.mydomain.org/sent/Professor"/>
+		<sent:has_name>Giwrgos</sent:has_name>
+		<sent:has_phone>2107010101</sent:has_phone>
+		<sent:has_email>giwrgos@gmail.com</sent:has_email>
+		<sent:has_age>40</sent:has_age>
+		<sent:member_of rdf:resource="http://www.mydomain.org/sent/Department1"/>
+		<sent:teaches   rdf:resource="http://www.mydomain.org/sent/Lesson1"/>
+	</rdf:Description>
+	
+	<rdf:Description rdf:about="http://www.mydomain.org/sent/Professor2">
+		<rdf:type rdf:resource="http://www.mydomain.org/sent/Professor"/>
+		<sent:has_name>Hlias</sent:has_name>
+		<sent:has_phone>2107010102</sent:has_phone>
+		<sent:has_email>hlias@gmail.com</sent:has_email>
+		<sent:has_age>29</sent:has_age>
+		<sent:member_of rdf:resource="http://www.mydomain.org/sent/Department1"/>
+		<sent:teaches   rdf:resource="http://www.mydomain.org/sent/Lesson10"/>
+	</rdf:Description>
+	
+	<rdf:Description rdf:about="http://www.mydomain.org/sent/Professor3">
+		<rdf:type rdf:resource="http://www.mydomain.org/sent/Professor"/>
+		<sent:has_name>Makis</sent:has_name>
+		<sent:has_phone>2107010103</sent:has_phone>
+		<sent:has_email>makis@gmail.com</sent:has_email>
+		<sent:has_age>47</sent:has_age>
+		<sent:member_of rdf:resource="http://www.mydomain.org/sent/Department1"/>
+		<sent:teaches   rdf:resource="http://www.mydomain.org/sent/Lesson9"/>
+	</rdf:Description>
+	
+	<rdf:Description rdf:about="http://www.mydomain.org/sent/Professor4">
+		<rdf:type rdf:resource="http://www.mydomain.org/sent/Professor"/>
+		<sent:has_name>Xristoforos</sent:has_name>
+		<sent:has_phone>2107010104</sent:has_phone>
+		<sent:has_email>xristoforos@gmail.com</sent:has_email>
+		<sent:has_age>44</sent:has_age>
+		<sent:member_of rdf:resource="http://www.mydomain.org/sent/Department1"/>
+		<sent:teaches   rdf:resource="http://www.mydomain.org/sent/Lesson8"/>
+	</rdf:Description>
+	
+	<rdf:Description rdf:about="http://www.mydomain.org/sent/Professor5">
+		<rdf:type rdf:resource="http://www.mydomain.org/sent/Professor"/>
+		<sent:has_name>Kwstas</sent:has_name>
+		<sent:has_phone>2107010105</sent:has_phone>
+		<sent:has_email>kwstas@gmail.com</sent:has_email>
+		<sent:has_age>33</sent:has_age>
+		<sent:member_of rdf:resource="http://www.mydomain.org/sent/Department4"/>
+		<sent:teaches   rdf:resource="http://www.mydomain.org/sent/Lesson7"/>
+	</rdf:Description>
+	
+	<rdf:Description rdf:about="http://www.mydomain.org/sent/Professor6">
+		<rdf:type rdf:resource="http://www.mydomain.org/sent/Professor"/>
+		<sent:has_name>Aggelikh</sent:has_name>
+		<sent:has_phone>2107010106</sent:has_phone>
+		<sent:has_email>aggelikh@gmail.com</sent:has_email>
+		<sent:has_age>39</sent:has_age>
+		<sent:member_of rdf:resource="http://www.mydomain.org/sent/Department2"/>
+		<sent:teaches   rdf:resource="http://www.mydomain.org/sent/Lesson6"/>
+	</rdf:Description>
+	
+	<rdf:Description rdf:about="http://www.mydomain.org/sent/Professor7">
+		<rdf:type rdf:resource="http://www.mydomain.org/sent/Professor"/>
+		<sent:has_name>Maria</sent:has_name>
+		<sent:has_phone>2107010107</sent:has_phone>
+		<sent:has_email>maria@gmail.com</sent:has_email>
+		<sent:has_age>45</sent:has_age>
+		<sent:member_of rdf:resource="http://www.mydomain.org/sent/Department5"/>
+		<sent:teaches   rdf:resource="http://www.mydomain.org/sent/Lesson5"/>
+	</rdf:Description>
+	
+	<rdf:Description rdf:about="http://www.mydomain.org/sent/Professor8">
+		<rdf:type rdf:resource="http://www.mydomain.org/sent/Professor"/>
+		<sent:has_name>Euh</sent:has_name>
+		<sent:has_phone>2107010108</sent:has_phone>
+		<sent:has_email>euh@gmail.com</sent:has_email>
+		<sent:has_age>60</sent:has_age>
+		<sent:member_of rdf:resource="http://www.mydomain.org/sent/Department5"/>
+		<sent:teaches   rdf:resource="http://www.mydomain.org/sent/Lesson4"/>
+	</rdf:Description>
+	
+	<rdf:Description rdf:about="http://www.mydomain.org/sent/Professor9">
+		<rdf:type rdf:resource="http://www.mydomain.org/sent/Professor"/>
+		<sent:has_name>Tolhs</sent:has_name>
+		<sent:has_phone>2107010109</sent:has_phone>
+		<sent:has_email>tolhs@gmail.com</sent:has_email>
+		<sent:has_age>31</sent:has_age>
+		<sent:member_of rdf:resource="http://www.mydomain.org/sent/Department3"/>
+		<sent:teaches   rdf:resource="http://www.mydomain.org/sent/Lesson3"/>
+	</rdf:Description>
+	
+	<rdf:Description rdf:about="http://www.mydomain.org/sent/Professor10">
+		<rdf:type rdf:resource="http://www.mydomain.org/sent/Professor"/>
+		<sent:has_name>Alex</sent:has_name>
+		<sent:has_phone>2107010111</sent:has_phone>
+		<sent:has_email>alex@gmail.com</sent:has_email>
+		<sent:has_age>43</sent:has_age>
+		<sent:member_of rdf:resource="http://www.mydomain.org/sent/Department6"/>
+		<sent:teaches   rdf:resource="http://www.mydomain.org/sent/Lesson2"/>
+	</rdf:Description>
+	
+	<rdf:Description rdf:about="http://www.mydomain.org/sent/Student1">
+		<rdf:type rdf:resource="http://www.mydomain.org/sent/Student"/>
+		<sent:has_name>KwstasK</sent:has_name>
+		<sent:has_phone>2107010201</sent:has_phone>
+		<sent:has_email>kwstas12@gmail.com</sent:has_email>
+		<sent:has_age>19</sent:has_age>
+		<sent:member_of rdf:resource="http://www.mydomain.org/sent/Department1"/>
+	</rdf:Description>
+	
+	<rdf:Description rdf:about="http://www.mydomain.org/sent/Student2">
+		<rdf:type rdf:resource="http://www.mydomain.org/sent/Student"/>
+		<sent:has_name>GiwrgosK</sent:has_name>
+		<sent:has_phone>2107010211</sent:has_phone>
+		<sent:has_email>giwrgos12@gmail.com</sent:has_email>
+		<sent:has_age>19</sent:has_age>
+		<sent:member_of rdf:resource="http://www.mydomain.org/sent/Department1"/>
+	</rdf:Description>
+	
+	<rdf:Description rdf:about="http://www.mydomain.org/sent/Student3">
+		<rdf:type rdf:resource="http://www.mydomain.org/sent/Student"/>
+		<sent:has_name>manthos</sent:has_name>
+		<sent:has_phone>2107010221</sent:has_phone>
+		<sent:has_email>manthos@gmail.com</sent:has_email>
+		<sent:has_age>21</sent:has_age>
+		<sent:member_of rdf:resource="http://www.mydomain.org/sent/Department6"/>
+	</rdf:Description>
+	
+	<rdf:Description rdf:about="http://www.mydomain.org/sent/Student4">
+		<rdf:type rdf:resource="http://www.mydomain.org/sent/Student"/>
+		<sent:has_name>AlexP</sent:has_name>
+		<sent:has_phone>2107010231</sent:has_phone>
+		<sent:has_email>alexp@gmail.com</sent:has_email>
+		<sent:has_age>23</sent:has_age>
+		<sent:member_of rdf:resource="http://www.mydomain.org/sent/Department4"/>
+	</rdf:Description>
+	
+	<rdf:Description rdf:about="http://www.mydomain.org/sent/Student5">
+		<rdf:type rdf:resource="http://www.mydomain.org/sent/Student"/>
+		<sent:has_name>Ermis</sent:has_name>
+		<sent:has_phone>2107010241</sent:has_phone>
+		<sent:has_email>ermis@gmail.com</sent:has_email>
+		<sent:has_age>22</sent:has_age>
+		<sent:member_of rdf:resource="http://www.mydomain.org/sent/Department5"/>
+	</rdf:Description>
+	
+	<rdf:Description rdf:about="http://www.mydomain.org/sent/Student6">
+		<rdf:type rdf:resource="http://www.mydomain.org/sent/Student"/>
+		<sent:has_name>Stelios</sent:has_name>
+		<sent:has_phone>2107010251</sent:has_phone>
+		<sent:has_email>stelios@gmail.com</sent:has_email>
+		<sent:has_age>22</sent:has_age>
+		<sent:member_of rdf:resource="http://www.mydomain.org/sent/Department5"/>
+	</rdf:Description>
+	
+	<rdf:Description rdf:about="http://www.mydomain.org/sent/Student7">
+		<rdf:type rdf:resource="http://www.mydomain.org/sent/Student"/>
+		<sent:has_name>HliasK</sent:has_name>
+		<sent:has_phone>2107010261</sent:has_phone>
+		<sent:has_email>hliask@gmail.com</sent:has_email>
+		<sent:has_age>21</sent:has_age>
+		<sent:member_of rdf:resource="http://www.mydomain.org/sent/Department6"/>
+	</rdf:Description>
+	
+	<rdf:Description rdf:about="http://www.mydomain.org/sent/Student8">
+		<rdf:type rdf:resource="http://www.mydomain.org/sent/Student"/>
+		<sent:has_name>Lewnidas</sent:has_name>
+		<sent:has_phone>2107010271</sent:has_phone>
+		<sent:has_email>Lewnidas@gmail.com</sent:has_email>
+		<sent:has_age>20</sent:has_age>
+		<sent:member_of rdf:resource="http://www.mydomain.org/sent/Department3"/>
+	</rdf:Description>
+	
+	<rdf:Description rdf:about="http://www.mydomain.org/sent/Student9">
+		<rdf:type rdf:resource="http://www.mydomain.org/sent/Student"/>
+		<sent:has_name>MakisK</sent:has_name>
+		<sent:has_phone>2107010281</sent:has_phone>
+		<sent:has_email>makisk@gmail.com</sent:has_email>
+		<sent:has_age>20</sent:has_age>
+		<sent:member_of rdf:resource="http://www.mydomain.org/sent/Department3"/>
+	</rdf:Description>
+	
+	<rdf:Description rdf:about="http://www.mydomain.org/sent/Student10">
+		<rdf:type rdf:resource="http://www.mydomain.org/sent/Student"/>
+		<sent:has_name>Katerina</sent:has_name>
+		<sent:has_phone>2107010291</sent:has_phone>
+		<sent:has_email>katerina@gmail.com</sent:has_email>
+		<sent:has_age>21</sent:has_age>
+		<sent:member_of rdf:resource="http://www.mydomain.org/sent/Department4"/>
+	</rdf:Description>
+	
+	<rdf:Description rdf:about="http://www.mydomain.org/sent/Student11">
+		<rdf:type rdf:resource="http://www.mydomain.org/sent/Student"/>
+		<sent:has_name>Gewrgia</sent:has_name>
+		<sent:has_phone>2107010301</sent:has_phone>
+		<sent:has_email>gewrgia@gmail.com</sent:has_email>
+		<sent:has_age>18</sent:has_age>
+		<sent:member_of rdf:resource="http://www.mydomain.org/sent/Department1"/>
+	</rdf:Description>
+	
+	<rdf:Description rdf:about="http://www.mydomain.org/sent/Student12">
+		<rdf:type rdf:resource="http://www.mydomain.org/sent/Student"/>
+		<sent:has_name>Xristina</sent:has_name>
+		<sent:has_phone>2107010311</sent:has_phone>
+		<sent:has_email>xristina@gmail.com</sent:has_email>
+		<sent:has_age>21</sent:has_age>
+		<sent:member_of rdf:resource="http://www.mydomain.org/sent/Department1"/>
+	</rdf:Description>
+	
+	<rdf:Description rdf:about="http://www.mydomain.org/sent/Student13">
+		<rdf:type rdf:resource="http://www.mydomain.org/sent/Student"/>
+		<sent:has_name>Aggelos</sent:has_name>
+		<sent:has_phone>2107010321</sent:has_phone>
+		<sent:has_email>aggelos@gmail.com</sent:has_email>
+		<sent:has_age>24</sent:has_age>
+		<sent:member_of rdf:resource="http://www.mydomain.org/sent/Department6"/>
+	</rdf:Description>
+	
+	<rdf:Description rdf:about="http://www.mydomain.org/sent/Student14">
+		<rdf:type rdf:resource="http://www.mydomain.org/sent/Student"/>
+		<sent:has_name>Eygenia</sent:has_name>
+		<sent:has_phone>2107010331</sent:has_phone>
+		<sent:has_email>eygenia@gmail.com</sent:has_email>
+		<sent:has_age>24</sent:has_age>
+		<sent:member_of rdf:resource="http://www.mydomain.org/sent/Department5"/>
+	</rdf:Description>
+	
+	<rdf:Description rdf:about="http://www.mydomain.org/sent/Student15">
+		<rdf:type rdf:resource="http://www.mydomain.org/sent/Student"/>
+		<sent:has_name>Kallioph</sent:has_name>
+		<sent:has_phone>2107010341</sent:has_phone>
+		<sent:has_email>kallioph@gmail.com</sent:has_email>
+		<sent:has_age>19</sent:has_age>
+		<sent:member_of rdf:resource="http://www.mydomain.org/sent/Department3"/>
+	</rdf:Description>
+	
+	<rdf:Description rdf:about="http://www.mydomain.org/sent/Lesson1">
+		<sent:les_name>AI</sent:les_name>
+		<sent:taught_by rdf:resource="http://www.mydomain.org/sent/Professor1"/>
+	</rdf:Description>
+	
+	<rdf:Description rdf:about="http://www.mydomain.org/sent/Lesson2">
+		<sent:les_name>Grammikh</sent:les_name>
+		<sent:taught_by rdf:resource="http://www.mydomain.org/sent/Professor10"/>
+	</rdf:Description>
+	
+	<rdf:Description rdf:about="http://www.mydomain.org/sent/Lesson3">
+		<sent:les_name>Pshfiaka</sent:les_name>
+		<sent:taught_by rdf:resource="http://www.mydomain.org/sent/Professor9"/>
+	</rdf:Description>
+	
+	<rdf:Description rdf:about="http://www.mydomain.org/sent/Lesson4">
+		<sent:les_name>Zwologia</sent:les_name>
+		<sent:taught_by rdf:resource="http://www.mydomain.org/sent/Professor8"/>
+	</rdf:Description>
+	
+	<rdf:Description rdf:about="http://www.mydomain.org/sent/Lesson5">
+		<sent:les_name>Biologia</sent:les_name>
+		<sent:taught_by rdf:resource="http://www.mydomain.org/sent/Professor7"/>
+	</rdf:Description>
+	
+	<rdf:Description rdf:about="http://www.mydomain.org/sent/Lesson6">
+		<sent:les_name>Sxedio</sent:les_name>
+		<sent:taught_by rdf:resource="http://www.mydomain.org/sent/Professor6"/>
+	</rdf:Description>
+	
+	<rdf:Description rdf:about="http://www.mydomain.org/sent/Lesson7">
+		<sent:les_name>Istoria</sent:les_name>
+		<sent:taught_by rdf:resource="http://www.mydomain.org/sent/Professor5"/>
+	</rdf:Description>
+	
+	<rdf:Description rdf:about="http://www.mydomain.org/sent/Lesson8">
+		<sent:les_name>Web</sent:les_name>
+		<sent:taught_by rdf:resource="http://www.mydomain.org/sent/Professor4"/>
+	</rdf:Description>
+	
+	<rdf:Description rdf:about="http://www.mydomain.org/sent/Lesson9">
+		<sent:les_name>Databases</sent:les_name>
+		<sent:taught_by rdf:resource="http://www.mydomain.org/sent/Professor3"/>
+	</rdf:Description>
+	
+	<rdf:Description rdf:about="http://www.mydomain.org/sent/Lesson10">
+		<sent:les_name>Shmata</sent:les_name>
+		<sent:taught_by rdf:resource="http://www.mydomain.org/sent/Professor2"/>
+	</rdf:Description>
+	
+	<rdf:Description rdf:about="http://www.mydomain.org/sent/Classroom1">
+		<rdf:type rdf:resource="http://www.mydomain.org/sent/Classroom"/>
+		<sent:room_name>BA</sent:room_name>
+		<sent:room_capacity>200</sent:room_capacity>
+		<sent:room_department rdf:resource="http://www.mydomain.org/sent/Department1"/>
+	</rdf:Description>
+	
+	<rdf:Description rdf:about="http://www.mydomain.org/sent/Classroom2">
+		<rdf:type rdf:resource="http://www.mydomain.org/sent/Classroom"/>
+		<sent:room_name>BB</sent:room_name>
+		<sent:room_capacity>100</sent:room_capacity>
+		<sent:room_department rdf:resource="http://www.mydomain.org/sent/Department1"/>
+	</rdf:Description>
+	
+	<rdf:Description rdf:about="http://www.mydomain.org/sent/Classroom3">
+		<rdf:type rdf:resource="http://www.mydomain.org/sent/Classroom"/>
+		<sent:room_name>AA</sent:room_name>
+		<sent:room_capacity>250</sent:room_capacity>
+		<sent:room_department rdf:resource="http://www.mydomain.org/sent/Department2"/>
+	</rdf:Description>
+	
+	<rdf:Description rdf:about="http://www.mydomain.org/sent/Classroom4">
+		<rdf:type rdf:resource="http://www.mydomain.org/sent/Classroom"/>
+		<sent:room_name>AB</sent:room_name>
+		<sent:room_capacity>150</sent:room_capacity>
+		<sent:room_department rdf:resource="http://www.mydomain.org/sent/Department2"/>
+	</rdf:Description>
+	
+	<rdf:Description rdf:about="http://www.mydomain.org/sent/Classroom5">
+		<rdf:type rdf:resource="http://www.mydomain.org/sent/Classroom"/>
+		<sent:room_name>AC</sent:room_name>
+		<sent:room_capacity>90</sent:room_capacity>
+		<sent:room_department rdf:resource="http://www.mydomain.org/sent/Department5"/>
+	</rdf:Description>
+	
+	<rdf:Description rdf:about="http://www.mydomain.org/sent/Classroom6">
+		<rdf:type rdf:resource="http://www.mydomain.org/sent/Classroom"/>
+		<sent:room_name>CA</sent:room_name>
+		<sent:room_capacity>120</sent:room_capacity>
+		<sent:room_department rdf:resource="http://www.mydomain.org/sent/Department5"/>
+	</rdf:Description>
+	
+	<rdf:Description rdf:about="http://www.mydomain.org/sent/Classroom7">
+		<rdf:type rdf:resource="http://www.mydomain.org/sent/Classroom"/>
+		<sent:room_name>AD</sent:room_name>
+		<sent:room_capacity>320</sent:room_capacity>
+		<sent:room_department rdf:resource="http://www.mydomain.org/sent/Department6"/>
+	</rdf:Description>
+	
+	<rdf:Description rdf:about="http://www.mydomain.org/sent/Classroom8">
+		<rdf:type rdf:resource="http://www.mydomain.org/sent/Classroom"/>
+		<sent:room_name>DA</sent:room_name>
+		<sent:room_capacity>180</sent:room_capacity>
+		<sent:room_department rdf:resource="http://www.mydomain.org/sent/Department6"/>
+	</rdf:Description>
+	
+	<rdf:Description rdf:about="http://www.mydomain.org/sent/Classroom9">
+		<rdf:type rdf:resource="http://www.mydomain.org/sent/Classroom"/>
+		<sent:room_name>AE</sent:room_name>
+		<sent:room_capacity>190</sent:room_capacity>
+		<sent:room_department rdf:resource="http://www.mydomain.org/sent/Department3"/>
+	</rdf:Description>
+	
+	<rdf:Description rdf:about="http://www.mydomain.org/sent/Classroom10">
+		<rdf:type rdf:resource="http://www.mydomain.org/sent/Classroom"/>
+		<sent:room_name>EA</sent:room_name>
+		<sent:room_capacity>134</sent:room_capacity>
+		<sent:room_department rdf:resource="http://www.mydomain.org/sent/Department3"/>
+	</rdf:Description>
+	
+	<rdf:Description rdf:about="http://www.mydomain.org/sent/Classroom11">
+		<rdf:type rdf:resource="http://www.mydomain.org/sent/Classroom"/>
+		<sent:room_name>AF</sent:room_name>
+		<sent:room_capacity>110</sent:room_capacity>
+		<sent:room_department rdf:resource="http://www.mydomain.org/sent/Department2"/>
+	</rdf:Description>
+	
+	<rdf:Description rdf:about="http://www.mydomain.org/sent/Classroom12">
+		<rdf:type rdf:resource="http://www.mydomain.org/sent/Classroom"/>
+		<sent:room_name>FA</sent:room_name>
+		<sent:room_capacity>400</sent:room_capacity>
+		<sent:room_department rdf:resource="http://www.mydomain.org/sent/Department2"/>
+	</rdf:Description>
+	
+</rdf:RDF>

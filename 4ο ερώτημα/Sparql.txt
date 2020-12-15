@@ -1,0 +1,35 @@
+PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sent:<http://www.mydomain.org/sent/>
+
+SELECT  ?phone
+WHERE {?professor rdf:type sent:Professor. //1o Ερώτημα
+?professor sent:has_phone ?phone.
+}
+	
+		
+SELECT  ?phone
+WHERE {?student rdf:type sent:Student.
+?student sent:has_phone ?phone.          //2ο ερώτημα
+?student sent:has_age ?age.
+FILTER(?age>"23"). 	  
+}	
+
+
+SELECT  ?name
+WHERE {?person rdf:type/rdfs:subClassOf* sent:Person.
+	?person sent:has_name ?name.
+	?person sent:member_of ?depname.      //3o ερώτημα
+	?depname sent:dep_city ?city.
+FILTER(?city = "Patra").
+} 	
+
+
+SELECT ?name
+WHERE {?class rdf:type sent:Classroom.
+?class sent:room_name ?name.
+?class sent:room_capacity ?capacity.  
+?class sent:room_department ?department.  //4o ερώτημα
+?department sent:dep_city ?city.
+FILTER(?capacity>"150" && ?city="Patra").
+}
